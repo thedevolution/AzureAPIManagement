@@ -59,12 +59,12 @@
 						</tr>						
 						<tr>
 							<td style="width: 50%;font-size: 16px;padding: 25px;color: darkslategray;"><span>Roughly 20 years of development industry experience</span></td>
-							<td style="width: 50%;font-size: 16px;padding: 25px;color: darkslategray;"><span>Major manufacturing, healthcare and insurance providers in the Milwaukee, Chicago area</span></td>
+							<td style="width: 50%;font-size: 16px;padding: 25px;color: darkslategray;"><span>Built software for major manufacturing, healthcare and insurance providers in the Milwaukee, Chicago area</span></td>
 						</tr>
 					</table>
 					<table style="background-color: whitesmoke;width: 75%;">
 						<tr>
-							<td colspan="3" style="text-align: center;font-size: 24px;padding: 25px;"><h3 style="color: #93a1a1;margin: 0px;">Focus Areas</h3></td>
+							<td colspan="3" style="text-align: center;font-size: 24px;padding: 25px;"><h3 style="color: #93a1a1;margin: 0px;">Relevant Focus Areas</h3></td>
 						</tr>
 						<tr>
 							<td style="width: 34%;text-align: center;font-size: 16px;padding: 25px;border-bottom: 0px;color: darkslategray;"><span><em>~15 years</em><br/>Service-Oriented Architectures</span>
@@ -134,110 +134,133 @@
 					</aside>
 				</section>
 				<section>
-					<h2>API-Oriented Architecture</h2>
+					<span class="fragment fade-out" style="font-size: 24px;">So let's shift our SOA mindset to...</span>
+					<h2 class="fragment">API-Oriented Architecture</h2>
 					<p class="fragment">Complimentary to SOA</p>
 					<p class="fragment">Allow services to be more easily consumed and managed</p>
 					<aside class="notes">
-						Really, an API-oriented architecture takes services and shifts the focus towards well-defined APIs
-						The idea behind API-Oriented Architecture is to allow services to be more easily consumed and managed.
-						Self-service
+						<ul>
+							<li>The focus, or intent of an API-Oriented Architecture is to ((((Read last fragment)))</li>
+						</ul>
 					</aside>
 				</section>
 				<section>
 					<h3>An "API" is:</h3>
 					<blockquote class="fragment">A means by which services are packaged, productized and shared in an easy-to-use format.</blockquote>
-					<p class="fragment">Work best when they are well managed.</p>
+					<p class="fragment">Maximize an API's potential when it is well managed.</p>
 					<aside class="notes">
 						Really what we're doing here is adding a wrapper around our services to give them better definition in an effort to make them easier to use and maintain.
 					</aside>
 				</section>
 				<section>
-					<h2 class="fragment">API Management</h2>
-					<p class="fragment">
-						in:<br/>
-						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/640px-Microsoft_Azure_Logo.svg.png"/>
+						<h3>API Management Core Components</h3>
+						<ul style="font-size: 32px;">
+							<li class="fragment">Gateway
+								<ul style="font-size: 24px;">
+									<li>Proxy API requests/responses</li>
+									<li>Policies (throttling, security, etc)</li>
+									<li>Transform requests/responses</li>
+									<li>Handle authentication, authorization</li>
+									<li>Caching and analytics collection</li>
+								</ul>
+							</li>						
+							<li class="fragment">Publishing tools
+								<ul style="font-size: 24px;">
+									<li>Manage API lifecycle (Creation, versioning, revisions, retirement)</li>
+									<li>Managing access and policies</li>
+									<li>Developer testing & debugging</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>API Management Core Components, cont'd</h3>
+						<ul style="font-size: 32px;">
+							<li>Developer portal/API store
+								<ul style="font-size: 24px;">
+									<li>Self-service access to APIs</li>
+									<li>Interactive console for test-driving</li>
+									<li>Ability to subscribe, gain access keys</li>
+								</ul>
+							</li>
+							<li class="fragment">Reporting and analytics
+								<ul style="font-size: 24px;">
+									<li>Monitor and report on API usage and loads</li>
+									<li>Raise alerts</li>
+								</ul>
+							</li>
+							<li class="fragment">Monetization
+								<ul style="font-size: 24px;">
+									<li>Charging for API access</li>
+								</ul>
+							</li>
+						</ul>
+					</section>				
+				<section>
+					<p>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/640px-Microsoft_Azure_Logo.svg.png" />
 					</p>
-				</section>		
+					<h2>API Management</h2>
+				</section>
 				<section>
 					<h5>Many API Managment vendors:</h5>
-					<table>
+					<table style="background-color: darkgrey;height: 90%;">
 						<tr>
 							<td style="vertical-align: top;width: 50%;">
 								<table>
 									<tr>
-										<td style="border-bottom: 0px;text-align:center;" colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/640px-Microsoft_Azure_Logo.svg.png"
-											 width="150px" /></td>
+										<td style="border-bottom: 0px;text-align:center;" colspan="2"><img
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/640px-Microsoft_Azure_Logo.svg.png"
+												width="150px" /></td>
 									</tr>
 									<tr>
 										<td style="border-bottom: 0px;">
-											<p class="fragment" data-fragment-index="0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Apigee_logo.svg/320px-Apigee_logo.svg.png"
-												 width="150px" /></p>
+											<p class="fragment" data-fragment-index="0"><img
+													src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Apigee_logo.svg/320px-Apigee_logo.svg.png"
+													width="150px" /></p>
 										</td>
 										<td style="border-bottom: 0px;">
-											<p class="fragment" data-fragment-index="1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/CA_Technologies_logo.svg/289px-CA_Technologies_logo.svg.png"
-												 width="150px" /></p>
+											<p class="fragment" data-fragment-index="1"><img
+													src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/MuleSoft_logo.svg/640px-MuleSoft_logo.svg.png"
+													width="150px" /></p>
 										</td>
 									</tr>
 									<tr>
 										<td style="border-bottom: 0px;">
-											<p class="fragment" data-fragment-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/WSO2_Software_Logo.png" width="150px" /></p>
+												<p class="fragment" data-fragment-index="0"><img
+													src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/CA_Technologies_logo.svg/289px-CA_Technologies_logo.svg.png"
+													width="150px" /></p>
+											
 										</td>
 										<td style="border-bottom: 0px;">
-											<p class="fragment" data-fragment-index="3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png"
-												 width="150px" /></p>
+												<p class="fragment" data-fragment-index="1"><img
+													src="https://upload.wikimedia.org/wikipedia/en/5/56/WSO2_Software_Logo.png"
+													width="150px" /></p>
+										</td>
+									</tr>
+									<tr>
+				
+										<td style="border-bottom: 0px;">
+											<p class="fragment" data-fragment-index="0"><img
+													src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png"
+													width="150px" /></p>
+				
+										</td>
+										<td style="border-bottom: 0px;">
+											<p class="fragment" data-fragment-index="1"><img
+													src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png"
+													width="150px" /></p>
 										</td>
 									</tr>
 								</table>
 							</td>
 							<td style="vertical-align: top;width: 50%;">
-								<p class="fragment" data-fragment-index="4"><img src="./img/GartnerMagicQuad.png" width="550px" style="max-width: none;"/></p>
+								<p class="fragment" data-fragment-index="4"><img src="./img/GartnerMagicQuad.png" width="550px"
+										style="max-width: none;" /></p>
 							</td>
 						</tr>
 					</table>
-				</section>
-				<section>
-					<h3>API Management Core Components</h3>
-					<ul style="font-size: 32px;">
-						<li class="fragment">Gateway
-							<ul style="font-size: 24px;">
-								<li>Proxy API requests/responses</li>
-								<li>Policies (throttling, security, etc)</li>
-								<li>Transform requests/responses</li>
-								<li>Handle authentication, authorization</li>
-								<li>Caching and analytics collection</li>
-							</ul>
-						</li>						
-						<li class="fragment">Publishing tools
-							<ul style="font-size: 24px;">
-								<li>Manage API lifecycle (Creation, versioning, revisions, retirement)</li>
-								<li>Managing access and policies</li>
-								<li>Testing, debugging</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h3>API Management Core Components, cont'd</h3>
-					<ul style="font-size: 32px;">
-						<li>Developer portal/API store
-							<ul style="font-size: 24px;">
-								<li>Self-service access to APIs</li>
-								<li>Interactive console for test-driving</li>
-								<li>Ability to subscribe, gain access keys</li>
-							</ul>
-						</li>
-						<li class="fragment">Reporting and analytics
-							<ul style="font-size: 24px;">
-								<li>Monitor and report on API usage and loads</li>
-								<li>Raise alerts</li>
-							</ul>
-						</li>
-						<li class="fragment">Monetization
-							<ul style="font-size: 24px;">
-								<li>Charging for API access</li>
-							</ul>
-						</li>
-					</ul>
 				</section>
 				<section>
 					<h3>Why Azure API Management?</h3>
@@ -256,9 +279,10 @@
 					</ul>
 					<aside class="notes">
 						<ul>
-							<li>Low-cost (pay as you go)</li>
+							<li>With it being Azure, there's a certain level of</li>
 							<li>Widely available across the world</li>
 							<li>Supported in nine languages.</li>
+							<li>Additionally there's some level of griping that comes with the cloud too... but we have found ways to deal with that (show Grandpa Simpson).</li>
 						</ul>
 						<ul>
 							<li>Design concepts behind the offering, which flow through to all services using it, are based on extensive
