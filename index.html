@@ -71,7 +71,7 @@
 					</tr>
 					<tr>
 						<td style="width: 50%;font-size: 16px;padding: 25px;color: darkslategray;"><span>Roughly 20
-								years of development industry experience</span></td>
+								years of development industry experience (Java, .NET)</span></td>
 						<td style="width: 50%;font-size: 16px;padding: 25px;color: darkslategray;"><span>Built software
 								for major manufacturing, healthcare and insurance providers in the Milwaukee, Chicago
 								area</span></td>
@@ -127,29 +127,61 @@
 				<h3>API Management Overview</h3>
 				<div class="fragment">
 					<ul>
-						<li>Facade for existing (backend) APIs/Services</li>
+						<li>API Facade on top of existing (backend) systems</li>
 					</ul>
 					<table>
 						<tr>
 							<td style="vertical-align: middle;text-align: center;" width="65%">
 								<img src="./img/APIFacade.png" />
 								<blockquote><span style="font-size: 16px;">Courtesy of: <a
-									href="https://pages.apigee.com/rs/apigee/images/api-facade-pattern-ebook-2012-06.pdf">Apigee</a></span>
-						</blockquote>
+											href="https://pages.apigee.com/rs/apigee/images/api-facade-pattern-ebook-2012-06.pdf">Apigee</a></span>
+								</blockquote>
 							</td>
-							<td style="font-size: 32px;vertical-align: middle;text-align: center;" width="35%"><span class="fragment">Masks complexity of accessing underlying systems</span></td>
+							<td style="font-size: 32px;vertical-align: middle;text-align: center;" width="35%"><span
+									class="fragment">Masks complexity of accessing those underlying systems</span></td>
 						</tr>
 					</table>
 				</div>
 			</section>
 			<section>
-				<h3>API Management Overview</h3>
-				<ul>
+				<h3>API Management Overview, cont'd</h3>
+				<ul style="font-size: 30px;">
+					<li class="fragment">Proxy is most typical pattern</li>
+				</ul>
+				<p>
+					<table>
+						<tr>
+							<td class="fragment" width="100%"
+								style="font-size: 18px;vertical-align: middle;text-align: center;background-color: whitesmoke;">
+								<img src="https://www.enterpriseintegrationpatterns.com/img/ProxyRequestResponse.png" />
+								<br />
+								Proxy Pattern
+							</td>
+						</tr>
+					</table>
+				</p>
+				<ul style="font-size: 30px;">
+					<li class="fragment">Best for modern (REST/JSON/OpenAPI) services</li>
+				</ul>
+			</section>
+			<section>
+				<h3>API Management Overview, cont'd</h3>
+				<ul style="font-size: 24px;">
 					<li class="fragment">Legacy APIs/Services can be complex</li>
 					<li class="fragment">Transform (mediate) to modern practices</li>
 				</ul>
 				<p>
 					<table>
+						<tr class="fragment">
+							<td colspan="3"
+								style="font-size: 18px;vertical-align: middle;text-align: right;border: 0px;">
+								<img src="https://www.enterpriseintegrationpatterns.com/img/MessageTranslator.gif" />
+							</td>
+							<td colspan="2"
+								style="font-size: 18px;vertical-align: middle;text-align: left;border: 0px;">
+								Message<br /> Translator<br /> Pattern
+							</td>
+						</tr>
 						<tr>
 							<td class="fragment" width="27%"
 								style="font-size: 18px;vertical-align: middle;text-align: center;">
@@ -169,7 +201,7 @@
 								style="font-size: 72px;vertical-align: middle;text-align: center;">=</td>
 							<td class="fragment" width="27%"
 								style="font-size: 18px;vertical-align: middle;text-align: center;">
-								<img src="https://upload.wikimedia.org/wikipedia/en/2/22/MissPiggy.jpg" />
+								<img src="https://upload.wikimedia.org/wikipedia/en/2/22/MissPiggy.jpg" width="80%" />
 								<br />
 								REST/JSON<br />OpenAPI
 							</td>
@@ -177,31 +209,32 @@
 					</table>
 			</section>
 			<section>
-					<h3>API Management Overview</h3>
-					<ul>
-						<li class="fragment">Require data from multiple systems
-							<ul>
-								<li class="fragment">Multiple transports/protocols</li>
-							</ul>
-						</li>
-						<li class="fragment">Orchestrate backend calls via single request</li>
-					</ul>
-					<p>
-						<table>
-							<tr>
-								<td class="fragment" width="50%"
-									style="font-size: 18px;vertical-align: middle;text-align: center;background-color: whitesmoke;">
-									<img src="https://www.enterpriseintegrationpatterns.com/img/BroadcastAggregate.gif"/>
-									<br/>
-									Scatter & Gather Pattern
-								</td>
-								<td class="fragment" width="50%"
-									style="font-size: 72px;vertical-align: middle;text-align: center;">
-									<img src="./img/mr-burns-monkeys-typewriters1-640x381.jpg" style="max-width: 500px;max-height: 500px;"/>
-								</td>
-							</tr>
-						</table>
-				</section>			
+				<h3>API Management Overview, cont'd</h3>
+				<ul style="font-size: 24px;">
+					<li class="fragment">Require data from multiple systems
+						<ul>
+							<li class="fragment">Multiple transports/protocols</li>
+						</ul>
+					</li>
+					<li class="fragment">Prefer 1 client request, multiple (orchestrated/aggregated)<br/> backend requests</li>
+				</ul>
+				<p>
+					<table>
+						<tr>
+							<td class="fragment" width="50%"
+								style="font-size: 18px;vertical-align: middle;text-align: center;background-color: whitesmoke;">
+								<img src="https://www.enterpriseintegrationpatterns.com/img/BroadcastAggregate.gif" />
+								<br />
+								Scatter & Gather Pattern
+							</td>
+							<td class="fragment" width="50%"
+								style="font-size: 72px;vertical-align: middle;text-align: center;">
+								<img src="./img/mr-burns-monkeys-typewriters1-640x381.jpg"
+									style="max-width: 500px;max-height: 500px;" />
+							</td>
+						</tr>
+					</table>
+			</section>
 			<section>
 				<h3>API Management Core Components</h3>
 				<ul style="font-size: 32px;">
@@ -252,7 +285,7 @@
 				<img src="./img/APIManagementOverview.png" />
 			</section>
 			<section>
-					<h3>Why Azure API Management?</h3>
+				<h3>Why Azure API Management?</h3>
 			</section>
 			<section>
 				<h5>Many API Managment vendors:</h5>
