@@ -1,0 +1,57 @@
+Policies
+<rate-limit calls="5" renewal-period="60" />
+<quota calls="10000" bandwidth="50000" renewal-period="86400" />
+
+<validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized (TechMKE). Access token is missing or invalid.">
+    <openid-config url="https://login.microsoftonline.com/a45f02dd-f21f-4060-b8ac-26e21234e77e/.well-known/openid-configuration" />
+    <audiences>
+        <audience>e465390c-c17b-4564-8b82-95fe2901a2e0</audience>
+    </audiences>
+</validate-jwt>
+
+ClientID: 5d4aa738-c5b1-4925-aba6-74c278d91470
+ClientSecret: t5FBKGtUO/fAbKbWtajtvEq3Cw/p/MR9TZMoQ5caZ7U=
+
+client_id=5d4aa738-c5b1-4925-aba6-74c278d91470&client_secret=t5FBKGtUO/fAbKbWtajtvEq3Cw/p/MR9TZMoQ5caZ7U=&grant_type=client_credentials&scope=
+
+https://login.microsoftonline.com/a45f02dd-f21f-4060-b8ac-26e21234e77e/oauth2/token
+
+application/x-www-form-urlencoded
+client_id=APP_ID&client_secret=SECRET&grant_type=client_credentials
+<set-variable name="resourceToBeAccessed" value="@(context.Request.Body.As<string>(preserveContent:true).Split('&').Where(s => s.StartsWith("scope=", StringComparison.OrdinalIgnoreCase)).Select(s => s.Split('=').Skip(1).FirstOrDefault()).FirstOrDefault())" />
+
+<set-body>
+@{ 
+    string inBody = context.Request.Body.As<string>(preserveContent: true); 
+    
+    return inBody + "&resource=" + context.Variables["resourceToBeAccessed"]; 
+}
+</set-body>
+
+
+APIs
+https://raw.githubusercontent.com/Azure/api-management-samples/master/apis/httpbin.swagger.json
+http://calcapi.cloudapp.net/calcapi.json
+http://www.dneonline.com/calculator.asmx?WSDL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <required-claims>
+        <claim name="id" match="all">
+            <value>insert claim here</value>
+        </claim>
+    </required-claims>
