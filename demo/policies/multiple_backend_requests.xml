@@ -33,7 +33,7 @@
                         string placeName = (string) placesOutput["results"][0]["name"];
                         string placeAddress = (string) placesOutput["results"][0]["formatted_address"];
 
-                        return new JObject(new JProperty("beerZipCodeResults",
+                        return new JObject(new JProperty("results",
                                     new JObject(
                                         new JProperty("zipCodeDescription", formattedAddress),
                                         new JProperty("craftBeerPlace", placeName),
